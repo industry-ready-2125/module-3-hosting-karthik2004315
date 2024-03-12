@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&family=Roboto+Condensed&family=Rubik+Bubbles&family=Rubik+Doodle+Shadow&family=Signika+Negative:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('../images/img.jpg') no-repeat ;
+            background-size: cover;
+        }
+        .login{
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+        }
+        input{
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+            border: none;
+            outline: none;
+            border: 2px solid gray;
+            border-radius: 15px;
+        }
+        .username, .password{
+            position: relative;
+            margin: 10px 0 20px 0;
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            background-color: rgb(159, 159, 159);
+            padding: 25px;
+            width: 30%;
+            background: transparent;
+            border: 1px solid rgb(182, 182, 182);
+            border-radius: 5px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgb(106, 105, 105);
+        }
+         i{
+            position: absolute;
+            right: 9px;
+            top: 9px;
+        }
+        
+        .button{
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        button{
+            width: 100%;
+            padding: 8px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .forgot{
+            text-align: right;
+            margin: -18px 0 15px;
+        }
+
+        .forgot a{
+            color: #ffffff;
+            font-size: 12px;
+        }
+        .CreateAccount{
+            color: #ffffff;
+            font-size: 13px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .CreateAccount a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            
+        }
+        .CreateAccount a:hover{
+            text-decoration: underline;
+        }
+        .emailText{
+            color:#fff;
+            font-weight: 300;
+            margin: 30px 0 0 5px;
+        }
+        .username i{
+            font-size: 20px;
+            margin: 0 6px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="login">
+            <h2> Forgot Password</h2>
+        </div>
+        <div class="emailText">
+            <h5> Enter Email to send OTP</h5>
+        </div>
+       <div class="username">
+            <input placeholder="Email" type="email" id="email" required>
+            <i class='bx bx-envelope'></i>
+       </div>
+
+       <div class="button">
+            <button onclick="return validate()"> Send OTP</button>
+       </div>
+
+       <div class="CreateAccount">
+            <p> Back to Login? <a href="login.html">Log in</a></p>
+       </div>
+    </div>
+    <script src="../js/forgot.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&family=Roboto+Condensed&family=Rubik+Bubbles&family=Rubik+Doodle+Shadow&family=Signika+Negative:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('../images/nigt.jpg') no-repeat ;
+            background-size: cover;
+        }
+        .register{
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+        }
+        input, select{
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+            border: none;
+            outline: none;
+            border: 2px solid gray;
+            border-radius: 15px;
+        }
+        
+        .username, .password{
+            position: relative;
+            margin: 20px 0;
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            background-color: rgb(159, 159, 159);
+            padding: 25px;
+            width: 25%;
+            background: transparent;
+            border: 1px solid rgb(182, 182, 182);
+            border-radius: 5px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgb(106, 105, 105);
+        }
+         i{
+            position: absolute;
+            right: 9px;
+            top: 9px;
+        }
+        
+        .button{
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        button{
+            width: 100%;
+            padding: 8px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .forgot{
+            text-align: right;
+            margin: -18px 0 15px;
+        }
+
+        .forgot a{
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        .gender{
+            margin: 20px 0;
+        }
+
+        .mobile{
+            margin: 20px 0;
+        }
+
+        .HaveLogin{
+            text-align: center;
+            color: #fff;
+            margin: 20px;
+        }
+
+        .HaveLogin a{
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+        }
+
+    /* Valid and invalid classes */
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form id="form">
+        <div class="register" action="indexLogin.html">
+            <h2> Register</h2>
+        </div>
+
+       <div class="username">
+            <input placeholder="username" type="text" id="uname" required minlength="6">
+            <i class='bx bx-user'></i>
+       </div>
+       <div class="username">
+        <input placeholder="Email" type="email" id="email" required>
+        <i class='bx bx-envelope'></i>
+       </div>
+
+       <div class="password">
+            <input placeholder="Password" type="password" id="pass" required minlength="8">
+            
+       </div>
+
+       <div class="password">
+        <input placeholder="Confirm Password" type="password" id="confirmPassword"   required>
+        
+       </div>
+
+       <div class="mobile">
+        <input placeholder="Mobile Number" type="number" id="mobile" required>
+        
+       </div>
+
+       <div class="gender">
+        <select name="cars" id="cars" aria-placeholder="Gender">
+            <option value="none">Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        
+       </div>
+
+       <!-- <div class="forgot">
+            <a href="forgot.html"> Forgot Password?</a>
+       </div> -->
+       <div class="button">
+            <button type="submit" onclick="return validateInput()"> Register</button>
+       </div>
+
+       <div class="HaveLogin">
+            <p> Already Have a login? <a href="login.html">Login</a></p>
+       </div>
+       </form>
+    </div>
+    <script defer src="../js/register.js"></script>
+</body>
+</html>

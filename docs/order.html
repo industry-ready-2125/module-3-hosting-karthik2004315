@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .order-form {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgb(229, 239, 191);
+        }
+        .order-form input, .order-form select {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .order-form button {
+            width: 100%;
+            padding: 10px;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form class="order-form">
+        <h2>Place Your Order</h2>
+        <select required>
+            <option value="">Select an item...</option>
+            <option value="item1">Item 1</option>
+            <option value="item2">Item 2</option>
+            <option value="item3">Item 3</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone Number" required>
+        <button type="submit">Submit Order</button>
+    </form>
+</body>
+</html>
